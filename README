@@ -1,0 +1,58 @@
+== Welcome to TicTacToe
+   Author: Rodolphe Edouard
+   Date: 9/30/2010
+   
+   Application where a human can play tictactoe against
+   the computer. 
+   
+   Application is simply a default Rails 3 application 
+   requiring Ruby version >= 1.9.2.
+   
+   No dependency on additional gems from that provided
+   with Rails 3 installation with the exception on
+   sqlite3 which is not used but some database 
+   adapter is necessary to run the server.
+   
+   Application does not use Active Record
+   or any database for that matter.
+   
+   Application boasts following features:
+   
+   --Unbeatable or Expert computer player
+   
+   --Detects for javascript and notifies user 
+     if it is disabled
+   
+   --Continous play with score keeping 
+   
+   --Computer always plays second automagically
+   
+   --On game over no action takes place
+     clicking on squares 
+   
+   --Clicking on a non blank square 
+     results in an error message
+   
+   Some notes on design:
+   
+   Uses jquery and ajax
+   
+   State is passed around in url and some stored
+   on the browser via javascript variables
+   
+   Board is viewed as a set of numbers from 1-9
+   
+   Whenever a player makes a move numbers are 
+   removed from a set of available numbers
+   
+   Game is analyzed after each move for wins, ties
+   
+   A move is made on behalf of the computer when it 
+   is the computer's turn
+   
+   Choice of move is first: 
+       try to win
+       block attempts by human to win
+       pick randomly available cell
+       
+       
