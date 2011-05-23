@@ -1,0 +1,7 @@
+<table> 
+<% 3.times  do |itr| %>
+  <tr>
+  <%= render :partial => 'game_table_row', :locals=>{:factor=>3*itr } %>
+  </tr>
+<% end %>
+</table>

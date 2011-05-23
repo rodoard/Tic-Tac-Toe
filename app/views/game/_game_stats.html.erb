@@ -1,0 +1,10 @@
+<div id="stats-msg"></div>
+<% [:human,:computer,:ties].each do |subj| %>
+<br><span>
+<%= text_field_tag subj,nil,:size=>5,:name=>"stats[#{subj}]" %>
+<%= label_tag(subj, subj.capitalize) %>
+</span></br>
+<% end %>
+<div id="play-again" style="visibility:hidden">
+<%= link_to 'Play another game',"javascript:void(0)",id:"play"%>
+</div>

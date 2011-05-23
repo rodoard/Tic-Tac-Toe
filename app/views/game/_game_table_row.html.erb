@@ -1,0 +1,5 @@
+<% 3.times  do |itr| %>
+  <td>
+  <%= render :partial => 'game_cell', :locals=>{:id=>(1+factor)+itr} %>
+  </td>
+<% end %>  

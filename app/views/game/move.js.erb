@@ -1,0 +1,33 @@
+if (<%= @new_game %>) {
+ $('#play-again').css('visibility','hidden')
+ $('#stats-msg').text('')
+ state=init_state()
+ <% 1.upto(9).each do |val| %>
+   $('#' + <%= val %> + ' ' + 'img').attr('src','images/<%= cell_image %>')
+<% end %>
+$('#turn').val('<%= @next_turn %>')
+}
+else {
+  $('#<%= @cid %> img').attr('src','images/<%= cell_image(@display) %>')
+
+  add_to_state= <%= @cid %> + " "
+
+  if (<%= computer_turn? @turn %>)
+    state.computer +=add_to_state
+  else 
+    state.human +=add_to_state
+    
+  delete state.available["<%= @cid %>"]  
+
+  $('#turn').val('<%= @next_turn %>')
+
+  stats = {}
+  <% @stats.each do |k,v| %>
+  stats['<%= k %>']='<%= v %>'
+  <% end %>
+
+  $.ajax({
+  url:'/game/analyze_state',
+  data:{state:state,stats:stats,turn:'<%= @next_turn %>' }
+  })
+}

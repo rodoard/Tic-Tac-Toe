@@ -1,0 +1,26 @@
+
+if (<%= @game_is_over %>) 
+  if (<%= @is_tie || false %>) 
+    int_incr_element('#ties','<%= @stats[:ties] %>')
+  else 
+    if (<%= winner_is_computer? @winner %>)
+     int_incr_element('#computer','<%= @stats[:computer] %>')
+    else
+     int_incr_element('#human','<%= @stats[:human] %>') 
+     
+
+<% unless @stats_msg.blank? %>
+   $('#stats-msg').text('<%= @stats_msg %>') 
+ <% end %>
+   
+if (<%= @game_is_over %>)   
+   state.available['0']=0 
+
+if (<%= @game_is_over %>)   
+   $('#play-again').css('visibility','visible')
+ 
+<%unless (@game_is_over || !computer_turn?(@turn))  %>
+$('#' + <%= @cid %>).click()
+<% end %>
+
+

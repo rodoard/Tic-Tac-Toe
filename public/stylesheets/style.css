@@ -1,0 +1,72 @@
+body { background-color: #2DC800; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   14px;
+}
+
+div#noscript {
+ color: blue;;
+} 
+div#hasJs {
+ display:none;
+}
+
+div#noscript p {
+ font-size: 16px
+}
+
+div#howto {
+ width:25%;
+ float:right;
+ padding-left:10px;
+ padding-right:15%;
+}
+
+div#howto .header{
+  font-weight:bold;
+}
+
+div#howto p{
+  font-size: 12px;
+}
+
+div#header {
+ text-align:center;
+ margin: 0 auto;
+ font-weight: bold;
+} 
+div#game-stats {
+ font-weight:bold;
+ padding-top:15px;
+}
+
+div#game-board{
+float:right;
+}
+
+div#stats-msg {
+ font-weight:bold;
+ color:red;
+ padding-top:5px;
+}
+
+div#game-board td{
+width:55px;
+height:55px;
+}
+div#game-container {
+   height:55px;
+}
+
+div#play-again {
+padding-top:15px;
+}
+
+div#game-stats {
+float:right;
+}
+
+div#game-stats  span input{
+margin-bottom:5px;
+}

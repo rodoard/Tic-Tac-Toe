@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tictactoe</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>  
+    <div id="header">
+     <p>Welcome
+     <p>Play Tic-Tac-Toe Against The computer
+    </div>
+    <div id="noscript"><center>
+       <p>Oops! Looks like you don't have javascript enabled.<br/>
+       It must be enabled in order to play the game.<br/>
+       Please enable it then try again.</p>
+       </center>
+    </div>
+    <div id="hasJs">    
+     <div id="howto"><%= yield :howto %></div>   
+     <div id="game-container">
+      <%= yield %>
+     </div>  
+  </div> 
+</body>
+</html>
